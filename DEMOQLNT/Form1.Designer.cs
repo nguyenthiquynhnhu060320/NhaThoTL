@@ -32,15 +32,16 @@ namespace DEMOQLNT
             this.components = new System.ComponentModel.Container();
             this.slidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.menubutton = new System.Windows.Forms.PictureBox();
+            this.btConDan = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.menubutton = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btConDan = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SlideTimer = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.slidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menubutton)).BeginInit();
@@ -72,6 +73,45 @@ namespace DEMOQLNT
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(222, 121);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(78, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 34);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Menu";
+            // 
+            // menubutton
+            // 
+            this.menubutton.BackgroundImage = global::DEMOQLNT.Properties.Resources.rsz_menu;
+            this.menubutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menubutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menubutton.Location = new System.Drawing.Point(9, 55);
+            this.menubutton.Name = "menubutton";
+            this.menubutton.Size = new System.Drawing.Size(52, 44);
+            this.menubutton.TabIndex = 0;
+            this.menubutton.TabStop = false;
+            this.menubutton.Click += new System.EventHandler(this.menubutton_Click);
+            // 
+            // btConDan
+            // 
+            this.btConDan.FlatAppearance.BorderSize = 0;
+            this.btConDan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConDan.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConDan.Image = global::DEMOQLNT.Properties.Resources.rsz_person;
+            this.btConDan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btConDan.Location = new System.Drawing.Point(3, 139);
+            this.btConDan.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
+            this.btConDan.Name = "btConDan";
+            this.btConDan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btConDan.Size = new System.Drawing.Size(250, 58);
+            this.btConDan.TabIndex = 2;
+            this.btConDan.Text = "    Con Dân";
+            this.btConDan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btConDan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btConDan.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
@@ -127,24 +167,6 @@ namespace DEMOQLNT
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::DEMOQLNT.Properties.Resources.report__1_;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 504);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(250, 58);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "    Báo Cáo";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.FlatAppearance.BorderSize = 0;
@@ -163,55 +185,44 @@ namespace DEMOQLNT
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // menubutton
+            // button3
             // 
-            this.menubutton.BackgroundImage = global::DEMOQLNT.Properties.Resources.rsz_menu;
-            this.menubutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menubutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menubutton.Location = new System.Drawing.Point(9, 55);
-            this.menubutton.Name = "menubutton";
-            this.menubutton.Size = new System.Drawing.Size(52, 44);
-            this.menubutton.TabIndex = 0;
-            this.menubutton.TabStop = false;
-            this.menubutton.Click += new System.EventHandler(this.menubutton_Click);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 34);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Menu";
-            // 
-            // btConDan
-            // 
-            this.btConDan.FlatAppearance.BorderSize = 0;
-            this.btConDan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btConDan.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConDan.Image = global::DEMOQLNT.Properties.Resources.rsz_person;
-            this.btConDan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btConDan.Location = new System.Drawing.Point(3, 139);
-            this.btConDan.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
-            this.btConDan.Name = "btConDan";
-            this.btConDan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btConDan.Size = new System.Drawing.Size(250, 58);
-            this.btConDan.TabIndex = 2;
-            this.btConDan.Text = "    Con Dân";
-            this.btConDan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btConDan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btConDan.UseVisualStyleBackColor = true;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::DEMOQLNT.Properties.Resources.report__1_;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(3, 504);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(250, 58);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "    Báo Cáo";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // SlideTimer
             // 
             this.SlideTimer.Interval = 10;
             this.SlideTimer.Tick += new System.EventHandler(this.SlideTimer_Tick);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(546, 234);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(309, 132);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Giáo Xứ Thọ Lâm";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1134, 817);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.slidebar);
             this.MinimumSize = new System.Drawing.Size(1152, 864);
             this.Name = "FormMain";
@@ -236,6 +247,7 @@ namespace DEMOQLNT
         private System.Windows.Forms.PictureBox menubutton;
         private System.Windows.Forms.Button btConDan;
         private System.Windows.Forms.Timer SlideTimer;
+        private System.Windows.Forms.Label label2;
     }
 }
 
